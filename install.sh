@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 set -e
 
+#WILLIAM PUT THIS IN
+yum install deltarpm
+
 # update instance
 yum -y update
 
 # install general libraries like Java or ImageMagick
 yum -y install default-jre ImageMagick
-
-#WILLIAM PUT THIS IN
-yum install deltarpm
 
 # add nodejs to yum
 curl --silent --location https://rpm.nodesource.com/setup_4.x | bash -
