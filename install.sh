@@ -2,7 +2,7 @@
 set -e
 
 #WILLIAM PUT THIS IN
-sudo pip uninstall urllib3 -y
+#sudo pip uninstall urllib3 -y
 
 # update instance
 yum -y update
