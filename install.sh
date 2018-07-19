@@ -3,7 +3,7 @@ set -e
 
 #WILLIAM PUT THIS IN
 #yum install -y deltarpm
-sudo pip uninstall urllib3
+sudo pip uninstall urllib3 -y
 
 # update instance
 yum -y update
