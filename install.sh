@@ -2,7 +2,7 @@
 set -e
 
 #WILLIAM PUT THIS IN
-yum install deltarpm
+yum install -y deltarpm
 
 # update instance
 yum -y update
