@@ -2,10 +2,11 @@
 set -e
 
 #WILLIAM PUT THIS IN
-yum install -y deltarpm
+#yum install -y deltarpm
 
 # update instance
-yum -y update
+#WILLIAM CHANGED FROM yum -y update TO yum update -y
+yum update -y
 
 # install general libraries like Java or ImageMagick
 yum -y install default-jre ImageMagick
