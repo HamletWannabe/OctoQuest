@@ -1,3 +1,32 @@
+
+
+//from SO. Testing for now
+var jsdom = require("jsdom");
+const { JSDOM } = jsdom;
+const { window } = new JSDOM();
+const { document } = (new JSDOM('')).window;
+global.document = document;
+
+var $ = jQuery = require('jquery')(window);
+
+const dom = new JSDOM(`<!DOCTYPE html><p>Hello world</p>`);
+console.log(dom.window.document.querySelector("p").textContent); // "Hello world"
+
+/*
+jsdom.env({
+    url : "http://localhost:8000/test.html",
+    features : {
+        FetchExternalResources : ['script'],
+        ProcessExternalResources : ['script']
+    },
+    done : function (error, window) {
+        window.test();
+        console.log(window.document.innerHTML);
+    }
+});
+*/
+
+//other stuff
 const octokit = require('@octokit/rest')({
   debug: true
 })
@@ -23,7 +52,7 @@ octokit.repos.getContent({
   path: ''
 })
 .then(result => {
-  console.log(result);
+  //console.log(result);
 })
 .catch(err => {
   console.log(err);
