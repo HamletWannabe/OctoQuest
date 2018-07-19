@@ -3,10 +3,10 @@ set -e
 
 #WILLIAM PUT THIS IN
 #yum install -y deltarpm
+sudo pip uninstall urllib3
 
 # update instance
-#WILLIAM CHANGED FROM yum -y update TO yum update -y
-yum update -y
+yum -y update
 
 # install general libraries like Java or ImageMagick
 yum -y install default-jre ImageMagick
